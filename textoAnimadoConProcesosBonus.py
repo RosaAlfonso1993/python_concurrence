@@ -1,10 +1,7 @@
 #Importa módulos para Interfaz Gráfica de usuario (tkinter)
 import tkinter as tk
 from tkinter import ttk
-
 import multiprocessing
-
-#import threading
 import time
 
 #Crea la ventana principal
@@ -35,18 +32,6 @@ def crearAnimacion(a, b, char):
         main_window.update_idletasks()
         main_window.update()
 
-#Ejecuta tres animaciones
-#crearAnimacion(10,10, 'X')
-#crearAnimacion(10,30, 'Y')
-#crearAnimacion(10,50, 'Z')
-
-#thread_1 = threading.Thread(target=crearAnimacion, args=(10,10,"X",))
-#thread_2 = threading.Thread(target=crearAnimacion, args=(10,30,"Y",))
-#thread_3 = threading.Thread(target=crearAnimacion, args=(10,50,"Z",))
-
-#thread_1.start()
-#thread_2.start()
-#thread_3.start()
 
 if __name__ == '__main__':
     animacionX = multiprocessing.Process(target=crearAnimacion, args=(10,10,"X",))
